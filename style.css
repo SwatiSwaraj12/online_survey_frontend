@@ -1,0 +1,195 @@
+/* ========== Global ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+  min-height: 100vh;
+  padding: 30px 15px;
+
+  background: linear-gradient(135deg, #1D4ED8, #06B6D4, #22C55E);
+}
+
+
+
+/* ========== Container ========== */
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* ========== Title ========== */
+h1 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #111827;
+  letter-spacing: 1px;
+}
+
+/* ========== Card ========== */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+
+  padding: 28px;
+  margin: 22px 0;
+  border-radius: 18px;
+
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 18px 45px rgba(0, 0, 0, 0.10);
+}
+
+.card h2 {
+  font-size: 21px;
+  font-weight: 750;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+/* ========== Input ========== */
+input[type="text"] {
+  width: 65%;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+  background: #ffffff;
+}
+
+input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0px 0px 0px 4px rgba(99, 102, 241, 0.18);
+}
+
+/* ========== Buttons ========== */
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+/* Add Question button */
+#addBtn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  margin-left: 10px;
+  box-shadow: 0px 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+#addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 24px rgba(79, 70, 229, 0.35);
+}
+
+/* ========== Questions List ========== */
+#questionList {
+  list-style: none;
+  padding: 0;
+}
+
+#questionList li {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  margin: 14px 0;
+  border-radius: 16px;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.04);
+  transition: 0.2s ease;
+}
+
+#questionList li:hover {
+  border-color: #c7d2fe;
+  transform: scale(1.01);
+}
+
+/* Question text */
+#questionList li b {
+  font-size: 17px;
+  color: #111827;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Submit + Results buttons inside question */
+#questionList li button {
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+/* Submit button */
+#questionList li button:nth-of-type(1) {
+  background: linear-gradient(135deg, #10b981, #22c55e);
+  color: white;
+  box-shadow: 0px 6px 14px rgba(16, 185, 129, 0.25);
+}
+
+#questionList li button:nth-of-type(1):hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 22px rgba(16, 185, 129, 0.35);
+}
+
+/* View Results button */
+#questionList li button:nth-of-type(2) {
+  background: linear-gradient(135deg, #f59e0b, #fb923c);
+  color: white;
+  box-shadow: 0px 6px 14px rgba(245, 158, 11, 0.25);
+}
+
+#questionList li button:nth-of-type(2):hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 22px rgba(245, 158, 11, 0.35);
+}
+
+/* Results box */
+#questionList li div {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px dashed #a5b4fc;
+  border-radius: 12px;
+  color: #111827;
+}
+
+/* Result list */
+#questionList li div ul {
+  padding-left: 20px;
+}
+
+#questionList li div ul li {
+  background: transparent;
+  border: none;
+  padding: 3px 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  #addBtn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
